@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css\style.css">
+	<link rel="icon" type="images/x-icon" href="Photos\favicon.ico">
+	<title>Joker</title>
+</head>
+<body>
+	<header>
+		<!-- ლოგო -->
+		<nav class="menu">
+			<a href="" class="logo">Joker</a>
+		</nav>
+	</header>
+	<!-- Input -->
+	<div class="Input">
+	  <input class="brutalist-input smooth-type" type="text"/>
+	  <label class="text">pirveli moTamaSe</label>
+	</div>
+	<div class="Input">
+	  <input class="brutalist-input smooth-type" type="text"/>
+	  <label class="text">meore moTamaSe</label>
+	</div>
+	<div class="Input">
+	  <input class="brutalist-input smooth-type" type="text"/>
+	  <label class="text">mesame moTamaSe</label>
+	</div>
+	<div class="Input">
+	  <input class="brutalist-input smooth-type" type="text"/>
+	  <label class="text">meoTxe moTamaSe</label>
+	</div>
+	
+	<div class="switch-container">
+		<ul class="stand-cxrianebi">
+		  <li>
+		  	<label for="s1" class="archevani">standartuli</label>
+		    <input id="s1" type="checkbox" class="switch">
+		    <label for="s1" class="archevani">cxrianebi</label>
+		  </li>
+		</ul>
+	</div>
+	</div>
+
+	<div class="xishti">
+		<label for="tempB">airCieT xiSti</label><br />
+		<input type="range" id="tempB" name="temp" list="values" />
+
+		<datalist id="values">
+		  <option value="0" label="0"></option>
+		  <option value="10" label="100"></option>
+		  <option value="20" label="200"></option>
+		  <option value="30" label="300"></option>
+		  <option value="40" label="400"></option>
+		  <option value="50" label="500"></option>
+		  <option value="60" label="600"></option>
+		  <option value="70" label="700"></option>
+		  <option value="80" label="800"></option>
+		  <option value="90" label="900"></option>
+		  <option value="100" label="1000"></option>
+		</datalist>
+	</div>
+	<div class="xishti">
+		<label for="tempB">airCieT cvetaobis fasi</label><br />
+		<input type="range" id="tempB" name="temp" list="values" />
+
+		<datalist id="values">
+		  <option value="0" label="0"></option>
+		  <option value="10" label="100"></option>
+		  <option value="20" label="200"></option>
+		  <option value="30" label="300"></option>
+		  <option value="40" label="400"></option>
+		  <option value="50" label="500"></option>
+		  <option value="60" label="600"></option>
+		  <option value="70" label="700"></option>
+		  <option value="80" label="800"></option>
+		  <option value="90" label="900"></option>
+		  <option value="100" label="1000"></option>
+		</datalist>
+	</div>
+	<div class="switch-container" id="bottom_margin">
+		<ul class="stand-cxrianebi">
+		  <li>
+		  	<label for="s1" class="archevani">marto TamaSi</label>
+		    <input id="s1" type="checkbox" class="switch">
+		    <label for="s1" class="archevani">wyvilebSi</label>
+		  </li>
+		</ul>
+	</div>
+
+	<div class="select-dropdown" id="first-dropdown">
+	  <select>
+	  	<option value=""></option>
+	    <option value="Option 1">moSla</option>
+	    <option value="Option 2">moSlis gareSe</option>
+	  </select>
+	</div>
+	<div class="select-dropdown" id="second-dropdown" style="display: none;">
+	  <select>
+	    <option value="Option 1">sxvebs eSlebaT (bolo iSleba)</option>
+	    <option value="Option 2">sxvebs ar eSlebaT (bolo iSleba)</option>
+	    <option value="Option 3">sxvebs eSlebaT</option>
+	    <option value="Option 4">sxvebs ar eSlebaT</option>
+	  </select>
+	</div>
+
+<button class="ui-btn">
+  <span>
+    TamaSis dawyeba 
+  </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const firstDropdown = document.getElementById('first-dropdown').querySelector('select');
+    const secondDropdown = document.getElementById('second-dropdown');
+
+    firstDropdown.addEventListener('change', function () {
+      if (this.value === 'Option 1') {
+        secondDropdown.style.display = 'block'; // აჩვენე მეორე dropdown
+      } else {
+        secondDropdown.style.display = 'none'; // დახურე მეორე dropdown
+      }
+    });
+
+    console.log('First dropdown:', firstDropdown);
+    console.log('Second dropdown:', secondDropdown);
+  });
+</script>
+</body>
+</html>
